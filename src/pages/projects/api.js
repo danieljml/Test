@@ -1,10 +1,8 @@
 const fetchDataFromGithubApi = async apiUrl => {
-  const token = import.meta.env.GITHUB_TOKEN;
-
   try {
     const response = await fetch(apiUrl, {
       headers: {
-        Authorization: `token ${token}`,
+        Authorization: `token ${import.meta.env.VITE_GITHUB_TOKEN}`,
       },
     });
 
