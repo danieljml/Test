@@ -1,6 +1,6 @@
 const fetchDataFromGithubApi = async apiUrl => {
   const mainRepoUrl = "https://raw.githubusercontent.com/AgustinCartaya/portfolio/agustin/src/my_projects/";
-  const token = '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';
+  const token = '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';
 
   try {
     const response = await fetch(apiUrl, {
