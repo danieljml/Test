@@ -5,7 +5,8 @@ const fetchDataFromGithubApi = async apiUrl => {
         Authorization: `token ${import.meta.env.VITE_GITHUB_TOKEN}`,
       },
     });
-    console.log(import.meta.env.VITE_GITHUB_TOKEN)
+    console.dir(import.meta)
+    console.dir(import.meta.env)
     const data = await response.json();
     const paths = data.map(item => item.path);
     return paths;

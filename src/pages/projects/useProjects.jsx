@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { fetchDataFromGithubApi } from './api';
 
 const useProjects = () => {
-  const username = 'AgustinCartaya';
-  const repo = 'portfolio';
+  const username = 'danieljml';
+  const repo = 'test';
   const relativePath = 'src/my_projects';
   const apiUrl = `https://api.github.com/repos/${username}/${repo}/contents/${relativePath}`;
   const rawUrl = `https://raw.githubusercontent.com/${username}/${repo}/main/`;
