@@ -22,12 +22,15 @@ jobs:
       run: npm install
 
     - name: LS
-      run: ls
-
+      run: ls; pwd
+      
     - name: Build
       run: npm run build
       env:
         VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
+
+    - name: LS 2
+      run: ls; pwd
 
     - name: Deploy
       run: npm run deploy
