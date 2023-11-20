@@ -27,7 +27,7 @@ jobs:
         VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
 
     - name: Testing token in env
-      run: echo "$VITE_GITHUB_TOKEN"
+      run: echo "${VITE_GITHUB_TOKEN}"
       env:
         VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
 
