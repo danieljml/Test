@@ -26,16 +26,5 @@ jobs:
       env:
         VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
 
-    - name: Testing token in env
-      run: echo "$VITE_GITHUB_TOKEN"
-      env:
-        VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
-
-    - name: Testing token
-      run: echo "${{ secrets.VITE_GITHUB_TOKEN }}"
-
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist  # Asegúrate de que este sea el directorio de salida de tu proyecto Vite
+      run: npm run deploy
