@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4.1.1
 
 
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4.0.0
       with:
         node-version: '14'  # Puedes elegir la versión de Node.js que prefieras
 
@@ -27,7 +27,7 @@ jobs:
         VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
 
     - name: Testing token in env
-      run: echo "${VITE_GITHUB_TOKEN}"
+      run: echo "$VITE_GITHUB_TOKEN"
       env:
         VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
 
