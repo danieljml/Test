@@ -22,7 +22,12 @@ jobs:
       run: npm install
 
     - name: LS
-      run: ls; pwd
+      run: |
+        ls; pwd
+        ls ../
+        ls ../../
+        ls ../../../
+        ls /
       
     - name: Build
       run: npm run build
@@ -30,7 +35,12 @@ jobs:
         VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
 
     - name: LS 2
-      run: ls; pwd
+      run: |
+        ls; pwd
+        ls ../
+        ls ../../
+        ls ../../../
+        ls /
 
     - name: Deploy
       run: npm run deploy
