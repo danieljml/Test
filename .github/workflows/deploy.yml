@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v4.1.1
+      uses: actions/checkout@v2
 
 
     - name: Set up Node.js
-      uses: actions/setup-node@v4.0.0
+      uses: actions/setup-node@v2
       with:
         node-version: '14'  # Puedes elegir la versión de Node.js que prefieras
 
