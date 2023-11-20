@@ -43,4 +43,7 @@ jobs:
         ls /
 
     - name: Deploy
-      run: npm run deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist  # Asegúrate de que este sea el directorio de salida de tu proyecto Vite
